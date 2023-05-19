@@ -50,6 +50,11 @@ let initWebRoutes = (app) => {
     router.get('/api/get-clinic', clinicController.getAllClinic);
     router.get('/api/get-detail-clinic-by-id', clinicController.getDetailClinicById);
 
+    // checkboking 
+    router.get('/api/getbookingByDateAndDoctorId', patientController.callBooking);// trả ra dữ danh sách đã đặt bởi id của doctor và ngày đặt
+    //deletebooked
+    router.get('/api/deleteBookingById', patientController.deleteBooking);
+
     return app.use("/", router);
 
 }

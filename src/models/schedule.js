@@ -29,5 +29,5 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'Schedule',
   });
-  return Schedule;// lịch trình khám
+  return Schedule;// lịch trình khám 
 };

@@ -11,9 +11,7 @@ let getHomePage = async (req, res) =>{
         console.log(data)
         console.log('-----------------------')
         
-        return res.render('homepage.ejs', {
-            data: JSON.stringify(data)
-        })
+        return res.json(data);
             
     } catch (e) {
         console.log(e)
@@ -26,9 +24,22 @@ let getCRUD = (req, res) => {
 }
 
 let postCRUD = async (req, res) => {
-    let message = await CRUDService.createNewUser(req.body);
-    console.log(message)
-    return res.send('post crud');
+    let data = req.body;
+    console.log("data: ",data)
+    await db.User.create({
+        email: data.email,
+        password: "hashPasswordFromBcrypt",
+        firstName: data.firstName,
+        lastName: data.lastName,
+        address: data.address,
+        phonenumber: data.phonenumber,
+        gender: data.gender,
+        roleId: data.roleId,
+        positionId: data.positionId,
+        image: data.avatar
+    })
+    
+    return res.json(data);
 }
 
 let displayGetCRUD = async (req, res) => {

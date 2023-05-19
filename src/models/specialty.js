@@ -22,5 +22,5 @@ module.exports = (sequelize, DataTypes) => {
     sequelize, 
     modelName: 'Specialty',
   });
-  return Specialty; // chuyên môn
+  return Specialty; // chuyên khoa
 };

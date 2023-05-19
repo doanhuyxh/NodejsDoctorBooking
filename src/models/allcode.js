@@ -33,5 +33,5 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'Allcode',
   });
-  return Allcode;// Phân quyền
+  return Allcode;// R là role  S là status T là time P là chức vụ M là giới tính Pr là giá Pay là thanh toán PRO địa chỉ
 };

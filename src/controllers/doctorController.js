@@ -122,7 +122,7 @@ let getListPatientForDoctor = async (req, res) => {
     try {
         let infor = await doctorService.getListPatientForDoctor(req.query.doctorId, req.query.date);
         return res.status(200).json(
-            infor
+                infor
         )
     } catch (e) {
         console.log(e);
