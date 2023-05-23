@@ -141,7 +141,8 @@ let postBookAppointment = (data) => {
                             date: data.date,
                             timeType: data.timeType,
                             token: token,
-                            reason:data.reason
+                            reason:data.reason,
+                            insuranceCardCode:data.insuranceCardCode
                         }
 
                     })
